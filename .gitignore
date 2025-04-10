@@ -1,8 +1,16 @@
 data/
+models/
 .env
 *.log
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.DS_Store.DS_Store
+*.DS_Store
+
+# Ignore CatBoost metadata
+catboost_info/
+*.tsv
+*.tfevents
+*.json
+cat_feature_index.*
