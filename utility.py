@@ -330,11 +330,11 @@ def tune_and_save_model(name, model, params, X_train, y_train, X_test, n_iter=10
 
 
 # Compute the evaluation metrics 
-def evaluate_model(y_test, y_pred, category_to_slice):
+def evaluate_model(y_test, y_pred, category_to_slice, top_k=5):
     category_metrics = {}  # Initialize a dictionary to store metrics by category
     
     # Loop through each unique 'make_category' in X_test
-    for make_category in category_to_slice.unique().tolist() + ["Overall"]:
+    for make_category in category_to_slice.value_counts()[:top_k].index.tolist() + ["Overall"]:
         # Filter the data based on 'Make' category
         if make_category == "Overall":
             y_test_slice = y_test
