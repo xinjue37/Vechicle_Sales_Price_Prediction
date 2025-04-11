@@ -5,7 +5,6 @@
   pip install -r requirements.txt
 ```
 * Running whole jupyter notebook required ~ 25 minutes
-* Time taken to complete this project: ~ 20h
 
 ## Directory Structure
 ```
